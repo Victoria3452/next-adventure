@@ -4,6 +4,7 @@ import os
 
 NUM_POINTS = 2000
 
+# can be swapped out for any other SVG file, header file, and variable name
 FILES = [
     ("bearcat.svg", "BearcatPoints.h", "bearcatPoints"),
     ("dragon.svg", "DragonPoints.h", "dragonPoints"),
@@ -12,7 +13,7 @@ FILES = [
 ]
 
 def sample_svg_points(svg_file, num_points):
-
+    # extract all SVG path objects from the file
     paths, attrs = svg2paths(svg_file)
 
     all_points = []
@@ -20,6 +21,7 @@ def sample_svg_points(svg_file, num_points):
     if len(paths) == 0:
         raise Exception(f"No paths found in {svg_file}")
 
+    # distribute samples roughly evenly across all paths
     points_per_path = max(1, num_points // len(paths))
 
     for path in paths:
@@ -46,6 +48,7 @@ def sample_svg_points(svg_file, num_points):
     width = max_x - min_x
     height = max_y - min_y
 
+    # scale shape to fit within 220x120 while maintaining aspect ratio, and center it in a 240x135 area
     scale_x = 220 / width
     scale_y = 120 / height
 
@@ -64,7 +67,8 @@ def sample_svg_points(svg_file, num_points):
         normalized.append(
             (int(nx), int(ny))
         )
-
+    # Randomize point order so points appear across entire shape 
+    # instead of drawn sequentially around the outline
     random.shuffle(normalized)
 
     if len(normalized) > num_points:
@@ -100,6 +104,7 @@ def write_header(filename, variable_name, points):
         f.write("};\n\n")
         f.write("#endif\n")
 
+# generate one header file for each SVG file, header_file, and variable_name in FILES
 for svg_file, header_file, variable_name in FILES:
 
     print("Processing", svg_file)
