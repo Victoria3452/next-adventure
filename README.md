@@ -6,7 +6,7 @@
 
 Developed for a LilyGO TTGO T-Display using Arduino IDE, *Next Adventure* was exhibited as part of a class installation on the fifth floor of Barnard's Milstein Center.
 
-**Blog Post:** [Link Here](https://victoria3452.github.io/next-adventure.html)
+**[Blog Post](https://victoria3452.github.io/next-adventure.html)**
 
 ---
 
