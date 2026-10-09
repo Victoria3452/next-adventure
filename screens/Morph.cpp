@@ -1,6 +1,7 @@
 #include "Config.h"
 #include "Morph.h"
 
+//Draws a mascot point cloud to the display
 void drawPointCloud(
     const Point* points,
     int count
@@ -18,6 +19,7 @@ void drawPointCloud(
     }
 }
 
+//Morphs one mascot point cloud into another
 void morphPoints(
     const Point* startPoints,
     const Point* endPoints,
@@ -59,6 +61,8 @@ void morphPoints(
     }
 }
 
+// Disperses a point cloud outward in random directions, creating an explosion like effect
+// Earlier exploration, not used in final animation
 void dispersePoints(
     const Point* points,
     int count
@@ -67,6 +71,7 @@ void dispersePoints(
     static int dx[2000];
     static int dy[2000];
 
+    // generate a random movement vector for each point
     for(int i = 0; i < count; i++)
     {
         dx[i] = random(-120,120);
@@ -107,6 +112,7 @@ void dispersePoints(
     delay(100);
 }
 
+// Gradually removes points from the mascot
 void fadePoints(
     const Point* points,
     int count
