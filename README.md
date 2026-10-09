@@ -37,5 +37,5 @@ images/demo.gif
 4) Connect the LilyGO TTGO T-Display.
 5) Upload the sketch to the device.
 
-Additional Notes: If you want to use different images, you can use a photo outline tool, saving as an svg instead and use the python script: svg_to_points.
+Additional Notes: If you want to use different images, you can use [a photo outline tool](https://vectordad.com/photo-to-outline/#google_vignette), saving as an svg instead and use the python script: svg_to_points.
 
