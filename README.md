@@ -11,7 +11,7 @@ Developed for a LilyGO TTGO T-Display using Arduino IDE, *Next Adventure* was ex
 ---
 
 ## Demo
-demo.gif
+![Next Adventure Demo](demo.gif)
 
 ## Design Goals
 - Reveal a quote with letters appearing in random order, materializing from darkness
