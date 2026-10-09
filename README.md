@@ -44,7 +44,7 @@ Developed for a LilyGO TTGO T-Display using Arduino IDE, *Next Adventure* was ex
 - TTGO T-Display and battery taped to back of envelope
 - String tied through hole to hang up
 
-<p align="center">
+<p>
   <img src="taped_to_envelope.jpeg" alt="Envelope" width="300">
 </p>
 
