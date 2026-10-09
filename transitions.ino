@@ -19,11 +19,14 @@ void setup()
 
 void loop()
 {
+  // Display opening quote animation
   showQuote();
 
+  // Present mascot choices and randomly select one
   int selected =
       showSelectionScreen();
 
+  // Display selected mascot and morph through previous mascot identities
   cycleMascots(selected);
 }
 
