@@ -34,6 +34,9 @@ void cycleMascots(int selected)
 {
     int count;
 
+    // Determine how many mascots to display
+    // Each mascot morphs through all previous
+    // school identities leading up to it
     switch(selected)
     {
         case BEARCAT:
@@ -60,6 +63,10 @@ void cycleMascots(int selected)
 
     int index = 0;
 
+    // Build the sequence of mascots to display,
+    // starting with the selected identity and
+    // continuing through its predecessors
+
     for(int mascot = selected;
         mascot >= BEARCAT;
         mascot--)
@@ -67,6 +74,7 @@ void cycleMascots(int selected)
         order[index++] = mascot;
     }
 
+    // Display selected mascot
     drawPointCloud(
         getPoints(order[0]),
         POINT_COUNT
@@ -74,6 +82,7 @@ void cycleMascots(int selected)
 
     delay(2500);
 
+    // Morph through previous mascot identities
     for(int i = 0; i < count - 1; i++)
     {
         morphPoints(
