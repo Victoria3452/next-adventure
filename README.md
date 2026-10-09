@@ -12,7 +12,7 @@ Developed for a LilyGO TTGO T-Display using Arduino IDE, *Next Adventure* was ex
 
 ## Demo
 ![Next Adventure Demo](demo.gif)
-[Video of full experience](youtube)
+[Video of full experience]([youtube](https://www.youtube.com/watch?v=3XgoQcn7P28))
 
 ## Design Goals
 - Reveal a quote with letters appearing in random order, materializing from darkness
