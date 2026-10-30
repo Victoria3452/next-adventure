@@ -11,7 +11,7 @@ Developed for a LilyGO TTGO T-Display using Arduino IDE, *Next Adventure* was ex
 ---
 
 ## Demo
-![Next Adventure Demo](media/demo.gif)
+![Next Adventure Demo](media/demo_na.gif)
 
 
 
